@@ -1338,6 +1338,14 @@ local locales = {
   },
 }
 
+locales["itIT"] = {}
+
+for k, v in pairs(locales) do
+  for key, value in pairs(v) do
+    locales["itIT"][key] = nil
+  end
+end
+
 pfQuest_Loc = setmetatable(locales[GetLocale()] or {}, { __index = function(tab,key)
  local value = tostring(key)
  rawset(tab,key,value)

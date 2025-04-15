@@ -16,6 +16,7 @@ pfDB.locales = {
   ["zhTW"] = "Taiwanese",
   ["esES"] = "Spanish",
   ["ruRU"] = "Russian",
+  ["itIT"] = "Italiano",
   ["ptBR"] = "Portuguese",
 }
 
@@ -152,7 +153,10 @@ end
 
 -- detect installed locales
 for key, name in pairs(pfDB.locales) do
-  if not pfDB["quests"][key] then pfDB.locales[key] = nil end
+  if not pfDB["quests"][key] then 
+      pfDB.locales[key] = nil
+      print("Rimossa traduzione '" .. name .. "'")
+     end
 end
 
 -- detect localized databases

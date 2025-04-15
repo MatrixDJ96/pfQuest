@@ -1,0 +1,7 @@
+[submodule "core"]
+	path = toolbox/core
+	url = https://github.com/vmangos/core
+
+[submodule "database"]
+	path = toolbox/database
+	url = https://github.com/mangoszero/database
